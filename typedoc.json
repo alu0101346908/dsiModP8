@@ -1,6 +1,11 @@
 {
   "entryPoints": [
-    ""
+    "./src/mod/newGenPokemon.ts",
+    "./src/mod/oldGenPokemon.ts",
+    "./src/mod/newGenPokemonCreator.ts",
+    "./src/mod/oldGenPokemonCreator.ts",
+    "./src/mod/pokemon.ts",
+    "./src/mod/pokemonFactory.ts"
   ],
   "out": "./docs"
 }

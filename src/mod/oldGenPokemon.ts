@@ -1,6 +1,6 @@
 import {PokemonStats, Pokemon, statsIndex} from './pokemon';
 /**
-* Clase que modela un Pokemon con sus atributos basicos asi como sus stats basicas de combate
+* Clase que modela un Pokemon de antigua generacion con sus atributos basicos asi como sus stats basicas de combate
 */
 export class OldGenPokemon implements Pokemon {
   /**

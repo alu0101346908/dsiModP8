@@ -55,9 +55,17 @@ export class NewGenPokemon implements Pokemon {
   setHp(hp:number) {
     this.stats[statsIndex.hp] = hp;
   }
+  /**
+   * Getter de la naturaleza del pokemon, unico de los pokemons de nueva generacion
+   * @returns String que contiene la naturaleza de los pokemons
+   */
   getNature():string {
     return this.nature;
   }
+  /**
+   * Setter de la naturaleza del pokemon, unico de los pokemons de nueva generacion
+   * @param nature Naturaleza a asignarle al pokemon
+   */
   setNature(nature:string) {
     this.nature = nature;
   }
