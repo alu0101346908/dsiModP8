@@ -16,6 +16,9 @@ describe('NewGenPokemonCreator tests', () => {
   it('El factoryMethod de NewGenPokemonCreator debe devolver un NewGenPokemon', () => {
     expect(newGenCreator.factoryMethod() instanceof NewGenPokemon).to.be.true;
   });
+  it('Existe un metodo logic especifico de NewGenPokemonCreator', () => {
+    expect(newGenCreator.logic()).to.be.eql('Nombre del pokemon :Toxel \n Tipo del pokemon: electrico y soy un pokemon de nueva generacion');
+  });
 });
 
 describe('OldGenPokemonCreator tests', () => {
@@ -25,5 +28,8 @@ describe('OldGenPokemonCreator tests', () => {
   });
   it('El factoryMethod de OldGenPokemonCreator debe devolver un OldGenPokemon', () => {
     expect(oldGenCreator.factoryMethod() instanceof OldGenPokemon).to.be.true;
+  });
+  it('Existe un metodo logic especifico de OldGenPokemonCreator', () => {
+    expect(oldGenCreator.logic()).to.be.eql('Nombre del pokemon :Charmander \n Tipo del pokemon: fuego y soy un pokemon de antigua generacion');
   });
 });

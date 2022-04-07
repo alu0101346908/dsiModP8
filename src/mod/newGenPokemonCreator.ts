@@ -10,4 +10,8 @@ export class NewGenPokemonCreator extends PokemonFactory {
   public factoryMethod():Pokemon {
     return new NewGenPokemon(this.name, this.weight, this.height, this.type, this.oldGenStats, this.nature);
   }
+  public logic():string {
+    const Pokemon = this.factoryMethod();
+    return `Nombre del pokemon :${Pokemon.getName()} \n Tipo del pokemon: ${Pokemon.getType()} y soy un pokemon de nueva generacion`;
+  }
 }

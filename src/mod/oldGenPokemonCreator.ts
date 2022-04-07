@@ -12,4 +12,8 @@ export class OldGenPokemonCreator extends PokemonFactory {
   public factoryMethod():Pokemon {
     return new OldGenPokemon(this.name, this.weight, this.height, this.type, this.oldGenStats);
   }
+  public logic():string {
+    const Pokemon = this.factoryMethod();
+    return `Nombre del pokemon :${Pokemon.getName()} \n Tipo del pokemon: ${Pokemon.getType()} y soy un pokemon de antigua generacion`;
+  }
 }
