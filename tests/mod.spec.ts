@@ -33,3 +33,37 @@ describe('OldGenPokemonCreator tests', () => {
     expect(oldGenCreator.logic()).to.be.eql('Nombre del pokemon :Charmander \n Tipo del pokemon: fuego y soy un pokemon de antigua generacion');
   });
 });
+
+
+describe('OldGenPokemon tests', () => {
+  const oldgenPokemon: OldGenPokemon = new OldGenPokemon('Charmander', 8.5, 0.6, 'fuego', [52, 43, 65, 39]);
+  it('Getters de oldGenPokemon', () => {
+    expect(oldgenPokemon.getName()).to.be.equal('Charmander');
+    expect(oldgenPokemon.getWeight()).to.be.equal(8.5);
+    expect(oldgenPokemon.getHeight()).to.be.equal(0.6);
+    expect(oldgenPokemon.getType()).to.be.equal('fuego');
+    expect(oldgenPokemon.getStats()).to.be.deep.equal([52, 43, 65, 39]);
+  });
+  it('Setters de oldGenPokemon', () => {
+    oldgenPokemon.setHp(50);
+    expect(oldgenPokemon.getStats()[statsIndex.hp]).to.be.equal(50);
+  });
+});
+
+describe('NewGenPokemon tests', () => {
+  const newgenPokemon: NewGenPokemon = new NewGenPokemon('Toxel', 6.9, 0.7, 'electrico', [49, 49, 45, 45], 'docile');
+  it('Getters de newGenPokemon', () => {
+    expect(newgenPokemon.getName()).to.be.equal('Toxel');
+    expect(newgenPokemon.getWeight()).to.be.equal(6.9);
+    expect(newgenPokemon.getHeight()).to.be.equal(0.7);
+    expect(newgenPokemon.getType()).to.be.equal('electrico');
+    expect(newgenPokemon.getStats()).to.be.deep.equal([49, 49, 45, 45]);
+    expect(newgenPokemon.getNature()).to.be.equal('docile');
+  });
+  it('Setters de newGenPokemon', () => {
+    newgenPokemon.setHp(50);
+    expect(newgenPokemon.getStats()[statsIndex.hp]).to.be.equal(50);
+    newgenPokemon.setNature('Sassy');
+    expect(newgenPokemon.getNature()).to.be.equal('Sassy');
+  });
+});
