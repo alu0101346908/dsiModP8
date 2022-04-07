@@ -1,7 +1,7 @@
 {
   "name": "dsiModP8",
   "version": "1.0.0",
-  "main": "1.js",
+  "main": "mod.js",
   "scripts": {
     "coverage": "nyc npm test && nyc report --reporter=lcov",
     "start": "tsc-watch --onSuccess \"node dist/mod/mod.js\"",
